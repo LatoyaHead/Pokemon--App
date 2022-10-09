@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/pokemon', (req, res) => {
-  res.render('pokemon')
+  res.send(pokemon)
 })
 
 
