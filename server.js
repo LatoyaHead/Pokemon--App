@@ -4,6 +4,7 @@ const pokemon = require('./models/pokemon')
 
 //App Init
 const app = express()
+app.use(express.static(__dirname + '../views'));
 const PORT = 3000
 
 //Middleware
@@ -19,8 +20,11 @@ app.get('/', (req, res) => {
 })
 
 app.get('/pokemon', (req, res) => {
-  res.send(pokemon)
+  res.render('index', {pokemon: pokemon}) //{name/value}
 })
+
+
+
 
 
 
