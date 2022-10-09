@@ -9,8 +9,12 @@ class Index extends React.Component {
 
        <ul> 
         {
-          this.props.pokemon.map(p => {
-            return <li style={{textTransform:'capitalize'}}>{p['name']}</li>
+          this.props.pokemon.map((p,i) => {
+            return (
+              <li style={{textTransform:'capitalize'}}>
+                <a href={`/pokemon/${i}`}>{p['name']}</a>
+              </li>
+            )
           })
         }
       </ul>
