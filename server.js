@@ -7,7 +7,6 @@ const app = express()
 app.use(express.static(__dirname + '../views'));
 const PORT = 3000
 
-//Middleware
 
 //App settings
 app.set('view engine', 'jsx');
@@ -24,8 +23,10 @@ app.get('/pokemon', (req, res) => {
 })
 
 app.get('/pokemon/:id', (req, res) => {
-  res.send(req.params.id)
+  res.render('Show', {pokemon: pokemon, id: req.params.id})
 })
+
+
 
 
 
