@@ -1,6 +1,6 @@
 //Load Modules
 const express = require('express')
-const pokemon = require('../models/pokemon')
+const pokemon = require('./models/pokemon')
 
 //App Init
 const app = express()
@@ -17,9 +17,12 @@ app.engine('jsx', require('express-react-views').createEngine())
 app.get('/', (req, res) => {
   res.send('Welcome to the Pokemon App!')
 })
-app.get('./pokemon', (req, res) => {
-  res.render('pokemon/Index', )
+
+app.get('/pokemon', (req, res) => {
+  res.render('pokemon')
 })
+
+
 
 
 app.listen(PORT, () => {
