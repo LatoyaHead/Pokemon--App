@@ -1,7 +1,7 @@
 const React = require('react')
 const Pokemon = require('./Pokemon')
 
-class Index extends React.Component {
+class Main extends React.Component {
   render() {
     console.log(this.props.pokemon);
     return (
@@ -15,7 +15,7 @@ class Index extends React.Component {
   }
 }
 
-module.exports = Index
+module.exports = Main
 
 
 const styles = {

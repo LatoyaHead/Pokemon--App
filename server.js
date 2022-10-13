@@ -26,7 +26,7 @@ app.get('/pokemon/new', (req, res) => {
 });
 
 app.get('/pokemon', (req, res) => {
-  res.render('index', {pokemon: pokemon}) //{name/value}
+  res.render('Main', {pokemon: pokemon}) //{name/value}
 })
 
 app.get('/pokemon/:id', (req, res) => {
