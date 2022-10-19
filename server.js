@@ -5,7 +5,7 @@ const pokemon = require('./models/pokemon')
 //App Init
 const app = express()
 app.use(express.static(__dirname + '../views'));
-const PORT = 3000
+const PORT = process.env.PORT || 3000
 
 
 //App settings
